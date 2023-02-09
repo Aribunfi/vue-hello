@@ -7,11 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Hello</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
 
-    <h1></h1>
+
+    <div id="app">
+        <h1>{{ message }}</h1>
+    </div>
+
+
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Ciao Vue, il cugino gentile di Javascript!'
+                }
+            }
+        }).mount('#app')
+    </script>
+
+
+
 
 
     <script src="main.js"></script>
